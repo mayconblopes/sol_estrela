@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 body {
-    background-image: linear-gradient(to bottom, #F1FBFC, #E2FAE4)
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #F1FBFC, #E2FAE4);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
 }
+
+body * {
+    font-family: 'Rubik', sans-serif;
+}
+
 header {
     text-align: center;
 }
@@ -19,14 +30,45 @@ header {
     top: 20px;
 }
 
+.flex-container {
+    display: flex;
+    flex-shrink: 0;
+    height: 56vh;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
 
-
-.vitrine {
+.card {
     width: 300px;
     background-color: #C9EAE8;
+    border-radius: 37px;
+    margin-bottom: 15px;
+
 
 }
 
-.vitrine div img {
+.card .product {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+}
+
+.card .product-image {
     width: 134.73px;
+    border-radius: 20px;
+}
+
+.card .product-description p {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+footer {
+    height: 125px;
+    background-color: #C5DCA8;
+
 }
