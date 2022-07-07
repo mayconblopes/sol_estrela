@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem vindo(a)!</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <header>
-        <img id="logo" src="static/logo_png.png" alt="Logo contendo um sol e uma estrela entre nuvens" />
-        <img id="ham-menu" src="static/ham-menu.svg"/>
-    </header>
+{% load static %}
 
+{% block body-main-content %}
     <main class="vitrine">
         <div class="flex-container">
 
             <article class="card">
                 <div class="product">
-                    <img class="product-image" src="static/exemplo1.jpg" alt="">
+                    <img class="product-image" src="{% static 'exemplo1.jpg' %}" alt="Foto do produto na vitrine">
                     <div class="product-description">
                         <p>Conjunto camisa careca vermelha e shorts marinheiro</p>
                         <p>R$ 49,90</p>
@@ -30,18 +18,7 @@
 
             <article class="card">
                 <div class="product">
-                    <img class="product-image" src="static/exemplo1.jpg" alt="">
-                    <div class="product-description">
-                        <p>Conjunto camisa careca vermelha e shorts marinheiro</p>
-                        <p>R$ 49,90</p>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="card">
-                <div class="product">
-                    <img class="product-image" src="static/exemplo1.jpg" alt="">
+                    <img class="product-image" src="{% static 'exemplo1.jpg' %}" alt="Foto do produto na vitrine">
                     <div class="product-description">
                         <p>Conjunto camisa careca vermelha e shorts marinheiro</p>
                         <p>R$ 49,90</p>
@@ -51,34 +28,16 @@
 
             <article class="card">
                 <div class="product">
-                    <img class="product-image" src="static/exemplo1.jpg" alt="">
+                    <img class="product-image" src="{% static 'exemplo1.jpg' %}" alt="Foto do produto na vitrine">
                     <div class="product-description">
                         <p>Conjunto camisa careca vermelha e shorts marinheiro</p>
                         <p>R$ 49,90</p>
                     </div>
                 </div>
             </article>
+
 
         </div>
     </main>
 
-    <footer>
-        <i></i>
-        <div id="whatsapp">
-            <img src="static/whatsapp-icon.svg" alt="" />
-            <p> (22)99253-2148</p>
-        </div>
-
-        <div id="instagram">
-           <img src="static/instagram-icon.svg" alt="" />
-           <p>@soleestrerlamodainfantil</p>
-        </div>
-
-        <div id="copyright">
-           <img src="" alt="" />
-           <p>&copy; Sol e Estrela, moda infantil. Todos os direitos reservados. 2022.</p>
-        </div>
-        <i></i>
-    </footer>
-</body>
-</html>
+{% endblock body-main-content %}

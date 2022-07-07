@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo(a)!</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!--    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">-->
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="{% static 'logo_png.png' %}" alt="Logo contendo um sol e uma estrela entre nuvens" />
+        <img id="ham-menu" src="{% static 'ham-menu.svg' %}"/>
+    </header>
+
+    {% block body-main-content %}
+
+    {% endblock body-main-content %}
+
+    <footer>
+        <i></i>
+        <div id="whatsapp">
+            <img src="{% static 'whatsapp-icon.svg' %}" alt="Logo do WhatsApp" />
+            <p> (22)99253-2148</p>
+        </div>
+
+        <div id="instagram">
+           <img src="{% static 'instagram-icon.svg' %}" alt="Logo do Instagram" />
+           <p>@soleestrerlamodainfantil</p>
+        </div>
+
+        <div id="copyright">
+           <img src="" alt="" />
+           <p>&copy; Sol e Estrela, moda infantil. Todos os direitos reservados. 2022.</p>
+        </div>
+        <i></i>
+    </footer>
+</body>
+
+</html>
