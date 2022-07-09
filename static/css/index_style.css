@@ -116,6 +116,11 @@ header {
     font-weight: 700;
 }
 
+.mais-detalhes {
+    text-align: right;
+    margin-right: 16px;
+}
+
 footer {
     height: 18.741vh;
     background-color: #C5DCA8;
