@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+*::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: none; }
 
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  background-color: #ee5858; }
 
 body {
     min-height: 100vh;
@@ -11,11 +19,14 @@ body {
 
     /* active this to disable blue highlights when tapping links on mobile devices
     -webkit-tap-highlight-color: transparent; */
+
 }
 
 body * {
     font-family: 'Rubik', sans-serif;
 }
+
+
 
 header {
     text-align: center;
