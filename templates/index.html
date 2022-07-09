@@ -2,19 +2,26 @@
 
 {% load static %}
 
+{% block link-css %}
+    <link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+{% endblock link-css%}
+
+{% block title %} Bem vindo(a)! {% endblock title %}
+
 {% block body-main-content %}
     <main class="vitrine">
         <div class="flex-container">
-
-            <article class="card">
-                <div class="product">
-                    <img class="product-image" src="{% static 'exemplo1.jpg' %}" alt="Foto do produto na vitrine">
-                    <div class="product-description">
-                        <p>Conjunto camisa careca vermelha e shorts marinheiro</p>
-                        <p>R$ 49,90</p>
+            <a href="/detalhes">
+                <article class="card">
+                    <div class="product">
+                        <img class="product-image" src="{% static 'exemplo1.jpg' %}" alt="Foto do produto na vitrine">
+                        <div class="product-description">
+                            <p>Conjunto camisa careca vermelha e shorts marinheiro</p>
+                            <p>R$ 49,90</p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </a>
 
             <article class="card">
                 <div class="product">

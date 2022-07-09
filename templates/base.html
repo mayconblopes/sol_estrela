@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem vindo(a)!</title>
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<!--    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">-->
+    {% block link-css %} {% endblock link-css %}
     <title>
         {% block title %}{% endblock title %}
     </title>
@@ -16,9 +14,17 @@
 
 <body>
     <header>
-        <img id="logo" src="{% static 'logo_png.png' %}" alt="Logo contendo um sol e uma estrela entre nuvens" />
-        <img id="ham-menu" src="{% static 'ham-menu.svg' %}"/>
+        <a href="/"><img class="logo" src="{% static 'logo_png.png' %}" alt="Logo contendo um sol e uma estrela entre nuvens" /></a>
+        <a id="ham-menu"><img src="{% static 'ham-menu.svg' %}"/></a>
     </header>
+    <nav class="menu-lateral">
+        <a href="/" class="menu-inicio">Início</a>
+        <a href="#" class="menu-meninas">Meninos</a>
+        <a href="#" class="menu-meninos">Meninas</a>
+        <a href="#" class="menu-contatos">Contatos</a>
+        <img class="logo" src="{% static 'logo_png.png' %}"/>
+    </nav>
+
 
     {% block body-main-content %}
 
@@ -42,6 +48,7 @@
         </div>
         <i></i>
     </footer>
+    <script src=" {% static 'menu.js' %}"></script>
 </body>
 
 </html>
