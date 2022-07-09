@@ -17,12 +17,14 @@
     width: 77vw;
     border-radius: 20px;
     margin: 0px;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
 }
 
 .card .product {
     display: flex;
     min-height: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
+
 }
 
 .card .product-description p {
