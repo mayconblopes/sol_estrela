@@ -1,3 +1,15 @@
 from django.contrib import admin
+from loja.models import Product
 
-# Register your models here.
+# admin.site.register(Product)
+
+
+admin.site.site_title = "Admin"
+admin.site.site_header = "Administração - Sol e Estrela: Moda Infantil"
+admin.site.index_title = "Sol e Estrela: Moda Infantil"
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('description', 'aquisition_data', 'aquisition_price', 'sell_price', 'quantity')
+    search_fields = ('description',)
