@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link-css %}
+    <link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/product_details_style.css' %}">
+{% endblock link-css%}
+
+{% block title %} Detalhes {% endblock title %}
+
+{% block body-main-content %}
+<main class="vitrine">
+
+    <div class="product-image__details">
+        <img src="{% static 'exemplo1.jpg' %}" alt="Foto do produto na vitrine">
+    </div>
+
+    <article class="card card-description">
+        <div class="product">
+            <div class="product-description">
+                <p>Conjunto camisa careca azul e shorts surfista.</p>
+                <p>Tamanhos 4, 6, 8 anos.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="card card-price">
+        <div class="product">
+            <div class="product-description">
+                <p>R$ 49,90 à vista ou em até 6x de R$ 9,15 no cartão de crédito.</p>
+            </div>
+            <div id="vertical-line"></div>
+            <div class="buy-it">
+                <a target="_blank" href="https://wa.me/5522992532148?text=Gostei de um produto!"> <img src="{% static 'shopping-cart.svg' %}" alt=""> Comprar</a>
+            </div>
+        </div>
+    </article>
+
+</main>
+
+{% endblock body-main-content %}
