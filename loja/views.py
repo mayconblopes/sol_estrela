@@ -1,9 +1,12 @@
+import quantity as quantity
 from django.shortcuts import render
 
+from loja.models import Product
 
-# Create your views here.
+
 def index(request):
-    return render(request, 'index.html')
+    products = Product.objects.all().exclude(quantity=0)
+    return render(request, 'index.html', {'products': products})
 
 
 def product_details(request):
