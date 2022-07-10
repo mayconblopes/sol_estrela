@@ -11,5 +11,5 @@ admin.site.index_title = "Sol e Estrela: Moda Infantil"
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('description', 'aquisition_data', 'aquisition_price', 'sell_price', 'quantity')
+    list_display = ('description', 'genre', 'aquisition_data', 'aquisition_price', 'sell_price', 'in_stock', 'size')
     search_fields = ('description',)
