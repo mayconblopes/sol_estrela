@@ -91,8 +91,10 @@ header {
     border-radius: 37px;
     margin-bottom: 15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-
+.MENINA {
+    background-color: #fae2ff;
 }
 
 .card .product {
@@ -109,16 +111,21 @@ header {
     border-radius: 20px;
 }
 
+.card .product-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+}
+
 .card .product-description p {
     padding-left: 3.8vw;
-    padding-bottom: 3.8vw;
     font-size: 3.75vw;
     font-weight: 700;
 }
 
-.more-details {
-    text-align: right;
-    margin-right: 16px;
+.more-details{
+    width: 7vw;
+    float: right;
 }
 
 footer {
