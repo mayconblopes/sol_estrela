@@ -13,14 +13,14 @@
     <main class="vitrine">
         <div class="flex-container">
             {% for product in products %}
-            <a href="/detalhes">
+            <a href="/detalhes/{{product.pk}}">
                 <article class="card">
                     <div class="product">
                         <img class="product-image" src="{{product.img}}" alt="Foto do produto na vitrine">
                         <div class="product-description">
                             <p>{{product.description}}</p>
                             <p>R$ {{product.sell_price}}</p>
-                            <p class="mais-detalhes">[+]</p>
+                            <p class="more-details">[+]</p>
                         </div>
                     </div>
                 </article>
