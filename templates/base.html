@@ -14,15 +14,16 @@
 
 <body>
     <header>
+        <img class="filter- filter-{%block filter_class%}{%endblock filter_class%}" src="/static/{%block filter_icon%}{%endblock filter_icon%}" alt="">
         <a href="/"><img class="logo" src="{% static 'logo_png.png' %}" alt="Logo contendo um sol e uma estrela entre nuvens" /></a>
         <a id="ham-menu"><img src="{% static 'ham-menu.svg' %}"/></a>
     </header>
     <nav class="menu-lateral">
-        <a href="/" class="menu-inicio">Início</a>
-        <a href="#" class="menu-meninas">Meninos</a>
-        <a href="#" class="menu-meninos">Meninas</a>
-        <a href="#" class="menu-pagamento">Pagamento</a>
-        <a href="#" class="menu-contatos">Contato</a>
+        <a href="/" id="menu-inicio">Início</a>
+        <a href="/boys" id="menu-meninos">Meninos</a>
+        <a href="/girls" id="menu-meninas">Meninas</a>
+        <a href="#" id="menu-pagamento">Pagamento</a>
+        <a href="#" id="menu-contatos">Contato</a>
         <img class="logo" src="{% static 'logo_png.png' %}"/>
     </nav>
 
@@ -32,7 +33,6 @@
     {% endblock body-main-content %}
 
     <footer>
-        <i></i>
         <div id="whatsapp">
             <img src="{% static 'whatsapp-icon.svg' %}" alt="Logo do WhatsApp" />
             <p> (22)99253-2148</p>
@@ -47,9 +47,13 @@
            <img src="" alt="" />
            <p>&copy; Sol e Estrela, moda infantil. Todos os direitos reservados. 2022.</p>
         </div>
-        <i></i>
     </footer>
     <script src=" {% static 'menu.js' %}"></script>
 </body>
 
+<!--créditos-->
+<!--<a href="https://www.flaticon.com/free-icons/girl" title="girl icons">Girl icons created by Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.com/free-icons/avatar" title="avatar icons">Avatar icons created by Freepik - Flaticon</a>-->
 </html>
+
+

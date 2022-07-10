@@ -8,6 +8,10 @@
 
 {% block title %} Bem vindo(a)! {% endblock title %}
 
+<!--This shows an icon of a little Girl or a little Boy if respective filter (on lateral menu) is active-->
+{%block filter_class%}{{filter_class}}{%endblock filter_class%}
+{%block filter_icon%}{{filter_icon}}{%endblock filter_icon%}
+
 {% block body-main-content %}
 
     <main class="vitrine">
@@ -26,8 +30,8 @@
                 </article>
             </a>
             {% endfor %}
-
         </div>
+
     </main>
 
 {% endblock body-main-content %}

@@ -4,7 +4,6 @@ from loja.models import Product
 
 
 def index(request):
-
     products = Product.objects.all().exclude(in_stock=False)
     return render(request, 'index.html', {'products': products})
 
@@ -25,5 +24,16 @@ def product_details(request, pk):
                                                     'size_label': size_label,
                                                     'installments_on_credit': installments_on_credit})
 
+
 def girls_products(request):
-    pass
+    products = Product.objects.all().exclude(in_stock=False).exclude(genre='MENINO')
+    return render(request, 'index.html', {'products': products,
+                                          'filter_class': 'MENINA',
+                                          'filter_icon': 'girl_icon.png', })
+
+
+def boys_products(request):
+    products = Product.objects.all().exclude(in_stock=False).exclude(genre='MENINA')
+    return render(request, 'index.html', {'products': products,
+                                          'filter_class': 'MENINO',
+                                          'filter_icon': 'boy_icon.png', })
