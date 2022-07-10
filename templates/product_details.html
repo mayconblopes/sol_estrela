@@ -12,14 +12,14 @@
 <main class="vitrine">
 
     <div class="product-image__details">
-        <img src="{% static 'exemplo1.jpg' %}" alt="Foto do produto na vitrine">
+        <img src="/{{product.img}}" alt="Foto do produto na vitrine">
     </div>
 
     <article class="card card-description">
         <div class="product">
             <div class="product-description">
-                <p>Conjunto camisa careca azul e shorts surfista.</p>
-                <p>Tamanhos 4, 6, 8 anos.</p>
+                <p>{{product.description}}</p>
+                <p>{{size_label}} {{size}}.</p>
             </div>
         </div>
     </article>
@@ -27,7 +27,7 @@
     <article class="card card-price">
         <div class="product">
             <div class="product-description">
-                <p>R$ 49,90 à vista ou em até 6x de R$ 9,15 no cartão de crédito.</p>
+                <p>R$ {{product.sell_price}} à vista ou em até 6x de R$ {{installments_on_credit}} no cartão de crédito.</p>
             </div>
             <div id="vertical-line"></div>
             <div class="buy-it">
