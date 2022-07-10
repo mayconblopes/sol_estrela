@@ -8,6 +8,7 @@ django = "*"
 python-decouple = "*"
 pillow = "*"
 django-multiselectfield = "*"
+django-admin-interface = "*"
 
 [dev-packages]
 

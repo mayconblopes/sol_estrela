@@ -14,3 +14,7 @@ vitrine:
     imagem-produto cantos arredondados (radius 20)
 
 
+Rodapé:
+    #C5DCA8
+
+
