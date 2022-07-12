@@ -840,10 +840,13 @@ table#change-history tbody th {
 .main > .content {
     flex:  1 0;
     max-width: 100%;
+    background-image: url('/static/kids_wallpaper_o_15.png');
+    background-size: contain;
 }
 
 #content {
     padding: 20px 40px;
+
 }
 
 .dashboard #content {
