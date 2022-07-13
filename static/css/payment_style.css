@@ -1,0 +1,82 @@
+main {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 0 40px 0 40px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.tittle {
+    display: flex;
+    align-items: center;
+    max-width: 510px;
+}
+
+h2 {
+    font-size: 6.4vw;
+    font-weight: 700;
+    text-align: center;
+    font-style: italic;
+    margin: 0px 8px 0 8px;
+
+}
+
+#payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 510px;
+}
+
+#payment-methods .card {
+    height: 15.2vw;
+    width: 32.34vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+#payment-methods p {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.credit-card {
+    background-color: #00BAFF;
+}
+
+.debit-card {
+    background-color: #60D66A;
+}
+
+.bank-slip {
+    background-color: #FB78E1;
+}
+
+.pix {
+    background-color: #FF543E;
+}
+
+.money {
+    background-color: #FFDD55;
+}
+
+.bank-transfer {
+    background-color: #FAE2FF;
+}
+
+@media only screen and (min-width: 436px) {
+    .card {
+        max-width: 141px;
+        max-height: 66.266px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}

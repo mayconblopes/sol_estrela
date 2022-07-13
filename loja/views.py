@@ -37,3 +37,7 @@ def boys_products(request):
     return render(request, 'index.html', {'products': products,
                                           'filter_class': 'MENINO',
                                           'filter_icon': 'boy_icon.png', })
+
+
+def payment(request):
+    return render(request, 'payment.html')
