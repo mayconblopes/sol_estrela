@@ -165,11 +165,8 @@ footer div {
 }
 
 footer div img {
-    width: 22px;
-}
-
-#instagram img{
-    width: 41px;
+    width: 18px;
+    margin-right: 8px;
 }
 
 @media only screen and (min-width: 390px) {

@@ -1,0 +1,64 @@
+main {
+    display: grid;
+    grid-template-rows: 0.5fr 1.5fr;
+    margin: 0 40px 0 40px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.tittle {
+    display: flex;
+    align-items: center;
+    max-width: 564px;
+}
+
+h2 {
+    font-size: min(4.27vw, 26.5px);
+    font-weight: 700;
+    text-align: center;
+    font-style: italic;
+    margin: 0px 8px 0 8px;
+
+}
+
+#contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 510px;
+}
+
+.card {
+    width: auto;
+    heigth: auto;
+}
+
+.instagram-contact, .whatsapp-contact {
+    background-color: #FAE2FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+.whatsapp-contact {
+    background-color: #00BAFF
+}
+
+.instagram-contact img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.whatsapp-contact img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+
+@media only screen and (min-width: 350px) {
+
+
+}
