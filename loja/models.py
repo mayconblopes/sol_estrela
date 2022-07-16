@@ -57,7 +57,7 @@ class Product(models.Model):
             https://drive.google.com/uc?export=view&id=1bgjU4oW49ubX2mA_GsUJ65Z0qfgbejgB
         """
 
-        if 'sharing' in self.img:
+        if 'usp=' in self.img:
             g_drive_view_url = 'https://drive.google.com/uc?export=view&id='
             g_drive_img_id = url.split('/')[-2]
             url = g_drive_view_url + g_drive_img_id
