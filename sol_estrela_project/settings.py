@@ -106,12 +106,12 @@ WSGI_APPLICATION = 'sol_estrela_project.wsgi.application'
 # production
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd4fk6mmmpei88i',
-        'USER': 'vhkxskeayawcoj',
-        'PASSWORD': '41eb9a350fd063cf060ef611bc943f055dc3432d8e2a4415bae707c24d4d5916',
-        'HOST': 'ec2-3-219-52-220.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': config('ENGINE'),
+        'NAME': config('NAME'),
+        'USER': config('USER'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        'PORT': config('PORT'),
     }
 }
 
