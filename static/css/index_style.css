@@ -68,7 +68,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     background-image: linear-gradient(to bottom, #3bbccc, pink, white);
-    height: 100vh;
+    height: 100%;
     width: min(75vw, 416px);
 
     position: absolute;
@@ -93,6 +93,7 @@ header {
 
 .menu-lateral--ativo {
     left: 0;
+    position: fixed;
     transition: .25s;
 }
 
