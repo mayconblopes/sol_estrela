@@ -122,13 +122,14 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 104px 36px;
-    background-image: var(--admin-interface-logo-default-background-image);
+    background-image: var(--admin-interface-logo-default-background-image) !important;
 }
 
 .admin-interface #branding h1 img.logo,
 .admin-interface.login #header #branding h1 img.logo {
     max-width: var(--admin-interface-log-max-width);
     max-height: var(--admin-interface-log-max-height);
+    content: url(https://drive.google.com/uc?export=view&id=16IR7OVRUpVa44c2CJSvAimfNRMoBMzW8);
 }
 
 .admin-interface #header #user-tools a {
