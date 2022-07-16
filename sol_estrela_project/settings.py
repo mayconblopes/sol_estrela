@@ -30,7 +30,7 @@ else:
     SECRET_KEY = config('SK')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # developer
 # ALLOWED_HOSTS = ['*']
