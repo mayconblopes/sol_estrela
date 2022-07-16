@@ -14,7 +14,7 @@
 }
 
 .product-image__details img {
-    width: 77vw;
+    width: min(77vw, 375.75px);
     border-radius: 20px;
     margin: 0px;
     box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
@@ -59,6 +59,6 @@
 }
 
 .card-price .buy-it a {
-    font-size: 3vw;
-    width: 8vw;
+    font-size: min(3vw, 17px);
+    width: min(8vw, 44px);
 }
