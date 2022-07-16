@@ -21,12 +21,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SK") 
+# SECRET_KEY
+if os.getenv('SECRET_KEY'):
+    SECRET_KEY = os.getenv('SECRET_KEY')
+else:
+    SECRET_KEY = config('SK')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# developer
+# ALLOWED_HOSTS = ['*']
+
+# Production
+ALLOWED_HOSTS = ['solestrela.heroku.com']
 
 
 # Application definition
@@ -84,13 +92,25 @@ WSGI_APPLICATION = 'sol_estrela_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# developer
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# production
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd4fk6mmmpei88i',
+        'USER': 'vhkxskeayawcoj',
+        'PASSWORD': '41eb9a350fd063cf060ef611bc943f055dc3432d8e2a4415bae707c24d4d5916',
+        'HOST': 'ec2-3-219-52-220.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
