@@ -31,7 +31,8 @@ class Product(models.Model):
         ('G', 'G'),
     ]
 
-    img = models.ImageField(upload_to='product_photos', verbose_name='Foto')
+    # img = models.ImageField(upload_to='product_photos', verbose_name='Foto')
+    img = models.CharField(max_length=3000, verbose_name='URL da imagem') # this will be a Google Drive File PUBLIC URL
     description = models.CharField(max_length=1000, verbose_name='Descrição')
     aquisition_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Preço de aquisição')
     aquisition_data = models.DateField(verbose_name='Data de aquisição')
@@ -48,8 +49,26 @@ class Product(models.Model):
     def __str__(self):
         return self.description[:255]
 
+    def convert_g_drive_url(self, url):
+        """Google Drive Files PUBLIC URL are like this:
+            https://drive.google.com/file/d/1bgjU4oW49ubX2mA_GsUJ65Z0qfgbejgB/view?usp=sharing
+
+            We have to go direct to the file, like this:
+            https://drive.google.com/uc?export=view&id=1bgjU4oW49ubX2mA_GsUJ65Z0qfgbejgB
+        """
+
+        if 'sharing' in self.img:
+            g_drive_view_url = 'https://drive.google.com/uc?export=view&id='
+            g_drive_img_id = url.split('/')[-2]
+            url = g_drive_view_url + g_drive_img_id
+
+        return url
+
     def save(self, *args, **kwargs):
         """overrides save method to change in_stock attribute"""
+
+        self.img = self.convert_g_drive_url(self.img)
+
         if len(self.size):
             self.in_stock = True
         else:
