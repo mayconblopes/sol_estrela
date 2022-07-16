@@ -11,11 +11,15 @@
   background-color: #ee5858; }
 
 body {
-    min-height: 100vh;
     background-image: linear-gradient(to bottom, #F1FBFC, #E2FAE4);
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin: 0;
+    position: fixed;
+
+    /* this height and min-width configuration is for mobile browsers. Without it, the tool bar of this browsers causes trouble*/
+    height: 100%;
+    min-width: 100vw;
 
     /* active this to disable blue highlights when tapping links on mobile devices
     -webkit-tap-highlight-color: transparent; */
@@ -35,7 +39,7 @@ header {
 }
 
 .filter- {
-    width: 6.5vw;
+    width: min(6.5vw, 50px);
     opacity: 0;
     align-self: end;
 
@@ -53,8 +57,6 @@ header {
     filter:         drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-
-
 #ham-menu {
     width: 6.5vw;
     align-self: start;
@@ -67,7 +69,7 @@ header {
     justify-content: space-around;
     background-image: linear-gradient(to bottom, #3bbccc, pink, white);
     height: 100vh;
-    width: 75vw;
+    width: min(75vw, 416px);
 
     position: absolute;
     left: -100vw;
@@ -75,12 +77,18 @@ header {
 }
 
 .menu-lateral a, img{
-    font-size: 5vw;
+    font-size: min(5vw, 27.7px);
+    align-self: center;
+}
+
+#developer-by {
+    font-size: min(2vw, 15.7px);
+    text-decoration: underline;
     align-self: center;
 }
 
 .menu-lateral img {
-    max-width: 40vw;
+    width: min(40vw, 272px);
 }
 
 .menu-lateral--ativo {
@@ -101,7 +109,7 @@ header {
 }
 
 .card {
-    width: 80vw;
+    width: min(80vw, 363.72px);
     background-color: #C9EAE8;
     border-radius: 37px;
     margin-bottom: 15px;
@@ -117,12 +125,12 @@ header {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     padding: 15px;
-    min-height: 20vh;
+    min-height: min(20vh, 189px);
     align-items: center;
 }
 
 .card .product-image {
-    width: 35.8vw;
+    width: min(35.8vw, 160px);
     border-radius: 20px;
 }
 
@@ -133,23 +141,24 @@ header {
 }
 
 .card .product-description p {
-    padding-left: 3.8vw;
-    font-size: 3.75vw;
+    padding-left: min(3.8vw, 10px);
+    font-size: min(3.75vw, 17px);
     font-weight: 700;
 }
 
 .more-details{
-    width: 7vw;
+    width: min(7vw, 31.42px);
     float: right;
 }
 
 footer {
-    height: 15vh;
+    height: min(15vh, 85px);
     background-color: #C5DCA8;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: auto;
 
 }
 
@@ -160,7 +169,7 @@ footer div {
     align-items: center;
     width: 68vw;
     text-align: center;
-    font-size: min(3.2vw, 22px);
+    font-size: min(3.2vw, 12px);
     font-weight: 700;
 }
 
@@ -176,5 +185,16 @@ footer div img {
 
     #ham-menu img {
         max-width: 27.36px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .flex-container {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 8px;
+
     }
 }
