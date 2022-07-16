@@ -106,12 +106,12 @@ WSGI_APPLICATION = 'sol_estrela_project.wsgi.application'
 # production
 DATABASES = {
     'default': {
-        'ENGINE': config('ENGINE'),
-        'NAME': config('NAME'),
-        'USER': config('USER'),
-        'PASSWORD': config('PASSWORD'),
-        'HOST': config('HOST'),
-        'PORT': config('PORT'),
+        'ENGINE': os.getenv('ENGINE') if os.getenv('ENGINE') else config('ENGINE'),
+        'NAME': os.getenv('NAME') if os.getenv('NAME') else config('NAME'),
+        'USER': os.getenv('USER') if os.getenv('USER') else config('USER'),
+        'PASSWORD': os.getenv('PASSWORD') if os.getenv('PASSWORD') else config('PASSWORD'),
+        'HOST': os.getenv('HOST') if os.getenv('HOST') else config('HOST'),
+        'PORT': os.getenv('PORT') if os.getenv('PORT') else config('PORT'),
     }
 }
 
