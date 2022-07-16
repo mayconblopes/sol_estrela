@@ -34,7 +34,7 @@ DEBUG = False
 # ALLOWED_HOSTS = ['*']
 
 # Production
-ALLOWED_HOSTS = ['solestrela.heroku.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
