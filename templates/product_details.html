@@ -26,9 +26,15 @@
 
     <article class="card card-price">
         <div class="product">
+            {% if installments_on_credit %}
             <div class="product-description">
-                <p>R$ {{product.sell_price}} à vista ou em até 6x de R$ {{installments_on_credit}} no cartão de crédito.</p>
+                <p>R$ {{product.sell_price}} à vista ou em até 5x de R$ {{installments_on_credit}} no cartão de crédito.</p>
             </div>
+            {% else %}
+            <div class="product-description">
+                <p>R$ {{product.sell_price}} à vista ou em 1x de R$ {{product.credit_price}} no cartão de crédito.</p>
+            </div>
+            {% endif %}
             <div id="vertical-line"></div>
             <div class="buy-it">
                 <a target="_blank" href="https://wa.me/5522992532148?text=Gostei desse produto {{ request.build_absolute_uri }}"> <img src="{% static 'shopping-cart.svg' %}" alt=""> Comprar</a>

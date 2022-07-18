@@ -15,9 +15,13 @@ def product_details(request, pk):
     size = ', '.join([item for item in product.size])
     size_label = 'Tamanhos' if len(product.size) > 1 else 'Tamanho'
 
-    # installment price on 6x times / preço parcelado em 6x vezes
-    installments_on_credit = float(product.credit_price) / 6
-    installments_on_credit = f'{installments_on_credit:.2f}'.replace('.', ',')  # -> 8,48 instead of 8.4833333333
+    # product price can be intallment if price is greater than 50
+    if product.sell_price > 50.00:
+        # installment price on 5x times / preço parcelado em 5x vezes
+        installments_on_credit = float(product.credit_price) / 5
+        installments_on_credit = f'{installments_on_credit:.2f}'.replace('.', ',')  # -> 8,48 instead of 8.4833333333
+    else:
+        installments_on_credit = False
 
     return render(request, 'product_details.html', {'product': product,
                                                     'size': size,
