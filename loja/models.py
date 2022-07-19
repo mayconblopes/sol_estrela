@@ -29,7 +29,7 @@ class Product(models.Model):
         ('P', 'P'),
         ('M', 'M'),
         ('G', 'G'),
-        ('TU', 'Tam. Único'),
+        ('Tam. Único', 'Tam. Único'),
     ]
 
     # img = models.ImageField(upload_to='product_photos', verbose_name='Foto')
