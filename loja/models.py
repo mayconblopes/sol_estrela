@@ -29,10 +29,11 @@ class Product(models.Model):
         ('P', 'P'),
         ('M', 'M'),
         ('G', 'G'),
+        ('TU', 'Tam. Único'),
     ]
 
     # img = models.ImageField(upload_to='product_photos', verbose_name='Foto')
-    img = models.CharField(max_length=3000, verbose_name='URL da imagem') # this will be a Google Drive File PUBLIC URL
+    img = models.CharField(max_length=3000, verbose_name='URL da imagem')  # this will be a Google Drive File PUBLIC URL
     description = models.CharField(max_length=1000, verbose_name='Descrição')
     aquisition_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Preço de aquisição')
     aquisition_data = models.DateField(verbose_name='Data de aquisição')
