@@ -1,8 +1,8 @@
 # Sol e Estrela: Moda infantil
 
-Note: I created this project for my sister-in-law. It is a children's clothing store, made with Python+Django, CSS e JAVASCRIPT.
+Note: I created this project for a special custumer. It is a children's clothing store, made with Python+Django, CSS e JAVASCRIPT.
 
-Nota: Criei este projeto para minha cunhada. É uma loja de roupas infantis, feita com Python+Django, CSS e JAVASCRIPT.
+Nota: Criei este projeto para uma cliente especial. É uma loja de roupas infantis, feita com Python+Django, CSS e JAVASCRIPT.
 
 O projeto foi feito em Django. Pude reunir todo meu conhecimento de Django, Python e CSS. Também usei Javascript.
 O site foi pensado em *mobile first*, mas também é responsivo para telas grandes.
