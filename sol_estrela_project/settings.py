@@ -95,23 +95,10 @@ WSGI_APPLICATION = 'sol_estrela_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# developer
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# production
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('ENGINE') if os.getenv('ENGINE') else config('ENGINE'),
-        'NAME': os.getenv('NAME') if os.getenv('NAME') else config('NAME'),
-        'USER': os.getenv('USER') if os.getenv('USER') else config('USER'),
-        'PASSWORD': os.getenv('PASSWORD') if os.getenv('PASSWORD') else config('PASSWORD'),
-        'HOST': os.getenv('HOST') if os.getenv('HOST') else config('HOST'),
-        'PORT': os.getenv('PORT') if os.getenv('PORT') else config('PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
