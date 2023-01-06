@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.http import FileResponse
+from django.shortcuts import render, get_object_or_404, redirect
 
 from loja.models import Product
 
@@ -49,3 +50,7 @@ def payment(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+def bkp(request):
+    return FileResponse(open('db.sqlite3', 'rb')) if request.user.is_superuser else redirect('/')
